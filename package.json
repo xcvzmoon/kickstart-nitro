@@ -6,11 +6,14 @@
     "build": "nitro build",
     "dev": "nitro dev",
     "preview": "node .output/server/index.mjs",
-    "format": "prettier . --write --ignore-path .prettierignore"
+    "format": "prettier . --write --ignore-path .prettierignore",
+    "lint": "oxlint . --fix -D correctness --ignore-path .gitignore"
   },
   "devDependencies": {
+    "@prettier/plugin-oxc": "^0.0.4",
     "h3": "^1.15.4",
     "nitropack": "^2.12.4",
+    "oxlint": "^1.25.0",
     "prettier": "^3.6.2"
   }
 }
