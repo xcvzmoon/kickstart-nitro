@@ -29,5 +29,6 @@
     "drizzle-zod": "^0.8.3",
     "pg": "^8.16.3",
     "zod": "^4.1.12"
-  }
+  },
+  "packageManager": "pnpm@10.20.0"
 }
