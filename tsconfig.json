@@ -30,7 +30,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["."],
-      "server": ["./server/*"]
+      "server/*": ["./server/*"]
     }
   }
 }
