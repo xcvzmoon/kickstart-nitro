@@ -19,8 +19,8 @@
     "@types/pg": "^8.15.6",
     "drizzle-kit": "^0.31.6",
     "h3": "^1.15.4",
-    "nitropack": "^2.12.4",
-    "oxlint": "^1.25.0",
+    "nitropack": "^2.12.9",
+    "oxlint": "^1.26.0",
     "pino-http": "^11.0.0",
     "pino-pretty": "^13.1.2",
     "prettier": "^3.6.2"
