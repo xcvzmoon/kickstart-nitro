@@ -17,7 +17,7 @@ export const poolConfig = poolConfigSchema.parse({
   host: runtimeConfig.db.host,
   port: runtimeConfig.db.port,
   database: runtimeConfig.db.database,
-  user: runtimeConfig.db.username,
+  user: runtimeConfig.db.user,
   password: runtimeConfig.db.password,
   ssl: runtimeConfig.db.ssl,
 });

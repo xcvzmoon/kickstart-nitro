@@ -17,7 +17,7 @@ export default defineNitroConfig({
       host: '',
       port: 0,
       database: '',
-      username: '',
+      user: '',
       password: '',
       ssl: false,
     },
