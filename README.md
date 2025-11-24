@@ -40,7 +40,7 @@ A production-ready Nitro.js starter template with PostgreSQL database integratio
    - `NITRO_DB_HOST`
    - `NITRO_DB_PORT`
    - `NITRO_DB_DATABASE`
-   - `NITRO_DB_USERNAME`
+   - `NITRO_DB_USER`
    - `NITRO_DB_PASSWORD`
    - `NITRO_DB_SSL`
 
