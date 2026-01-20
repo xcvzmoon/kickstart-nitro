@@ -1,18 +1,9 @@
 import { defineConfig } from 'drizzle-kit';
-import { poolConfigSchema } from 'server/types/zod-schemas/pool-config';
-
-const poolConfig = poolConfigSchema.parse({
-  host: process.env.NITRO_DB_HOST,
-  port: process.env.NITRO_DB_PORT,
-  database: process.env.NITRO_DB_DATABASE,
-  user: process.env.NITRO_DB_USER,
-  password: process.env.NITRO_DB_PASSWORD,
-  ssl: process.env.NITRO_DB_SSL,
-});
+import { dbOptions } from 'server/database';
 
 export default defineConfig({
   dialect: 'postgresql',
-  dbCredentials: poolConfig,
+  dbCredentials: dbOptions,
   schema: './server/database/schemas/*.ts',
   out: './server/database/migrations',
   casing: 'snake_case',

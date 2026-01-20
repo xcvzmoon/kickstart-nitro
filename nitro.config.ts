@@ -13,15 +13,5 @@ export default defineNitroConfig({
   alias: {
     server: resolve(__dirname, './server'),
   },
-  runtimeConfig: {
-    db: {
-      host: '',
-      port: 0,
-      database: '',
-      user: '',
-      password: '',
-      ssl: false,
-    },
-  },
   preset: 'bun',
 });
