@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "nitro build",
-    "dev": "nitro dev",
-    "preview": "node .output/server/index.mjs",
+    "build": "bunx --bun nitro build",
+    "dev": "bunx --bun nitro dev",
+    "start": "bun .output/server/index.mjs",
     "format": "oxfmt && oxfmt --check",
     "lint": "oxlint --type-aware --fix -D correctness --ignore-path .gitignore",
-    "db:generate": "drizzle-kit generate",
-    "db:push": "drizzle-kit push",
-    "db:pull": "drizzle-kit pull",
-    "db:studio": "drizzle-kit studio",
-    "db:check": "drizzle-kit check"
+    "db:generate": "bunx --bun drizzle-kit generate",
+    "db:push": "bunx --bun drizzle-kit push",
+    "db:pull": "bunx --bun drizzle-kit pull",
+    "db:studio": "bunx --bun drizzle-kit studio",
+    "db:check": "bunx --bun drizzle-kit check"
   },
   "dependencies": {
     "drizzle-orm": "^0.44.7",
