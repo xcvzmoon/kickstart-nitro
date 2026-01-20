@@ -1,8 +1,8 @@
-import { useRuntimeConfig } from 'nitropack/runtime';
-import { poolConfigSchema } from 'server/types/zod-schemas/pool-config';
 import { drizzle } from 'drizzle-orm/node-postgres';
-import { Pool } from 'pg';
 import { EnhancedQueryLogger } from 'drizzle-query-logger';
+import { useRuntimeConfig } from 'nitropack/runtime';
+import { Pool } from 'pg';
+import { poolConfigSchema } from 'server/types/zod-schemas/pool-config';
 
 const runtimeConfig = useRuntimeConfig();
 const poolConfig = poolConfigSchema.parse(runtimeConfig.db);
