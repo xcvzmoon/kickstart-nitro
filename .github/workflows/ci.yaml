@@ -12,28 +12,30 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [lts/*]
+        bun-version: [latest]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup pnpm (from package.json)
-        uses: pnpm/action-setup@v3
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
         with:
-          run_install: false
+          bun-version: ${{ matrix.bun-version }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Cache bun dependencies
+        uses: actions/cache@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install
 
-      - name: Check Lint
-        run: pnpm lint
+      - name: Check lint
+        run: bun run lint
 
-      - name: Build Nitro
-        run: pnpm build
+      - name: Build app
+        run: bun run build

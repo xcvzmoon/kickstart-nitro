@@ -22,4 +22,5 @@ export default defineNitroConfig({
       ssl: false,
     },
   },
+  preset: 'bun',
 });
